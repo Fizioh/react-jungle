@@ -1,5 +1,6 @@
 function Banner() {
-    return <h1>La maison jungle</h1>
+    const titre = "La maison jungle";
+    return <h1>{ titre }</h1>
 }
 
-export default Banner
+export default Banner;

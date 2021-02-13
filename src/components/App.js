@@ -1,8 +1,11 @@
-import './App.css';
-import Banner from './Banner'
+import Banner from './banner';
+import Cart from './cart';
 
 function App() {
-  return <Banner />
+  return <div> 
+    <Banner />
+  <Cart />
+  </div>
 }
 
 export default App;
