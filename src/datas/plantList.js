@@ -2,7 +2,8 @@ export const plantList = [
 	{
 		name: 'monstera',
 		category: 'classique',
-		id: '1ed'
+		id: '1ed',
+        isBestSale: true
 	},
 	{
 		name: 'ficus lyrata',
@@ -17,7 +18,8 @@ export const plantList = [
 	{
 		name: 'yucca',
 		category: 'classique',
-		id: '4kk'
+		id: '4kk',
+        isBestSale: true
 	},
 	{
 		name: 'olivier',
