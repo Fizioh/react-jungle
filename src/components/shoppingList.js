@@ -10,7 +10,7 @@ function ShoppingList() {
     return(
         <div>
             {plantList.map((plant) =>(
-                <li>{plant}</li>
+                <li key={'${plant}-${index}'}>{plant}</li>
             ))}
         </div>
     )
