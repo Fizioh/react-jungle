@@ -25,7 +25,7 @@ export const plantList = [
 		name: 'yucca',
 		category: 'classique',
 		id: '4kk',
-        isSpecialOffer: true,
+        isBestSale: true,
 		light: 2,
 		water: 2
 	},
@@ -54,7 +54,7 @@ export const plantList = [
 		name: 'aloe',
 		category: 'plante grasse',
 		id: '8fp',
-        isSpecialOffer: true,
+        iisBestSale: true,
 		light: 2,
 		water: 1
 	},
