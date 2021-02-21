@@ -1,6 +1,5 @@
 import { plantList } from '../datas/plantList'
 import '../styles/shoppingList.css'
-import CareScale from './careScale'
 import PlantItem from './plantItem'
 
 function ShoppingList() {
