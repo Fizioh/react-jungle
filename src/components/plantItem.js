@@ -1,8 +1,18 @@
 import CareScale from './careScale'
+import '../styles/plantItem.css'
 
-function PlantItem() {
+function PlantItem({id, cover, name, water, light}) {
+   return (
+       <li key={id} className='lmj-plant-item'>
+            <img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
+            {name}
+            <div>
+                <CareScale careType='water' scaleValue={water} />
+                <CareScale careType='light' scaleValue={light} />
 
-    <CareScale />
+            </div>
+       </li>
+   )
 }
 
 export default PlantItem
