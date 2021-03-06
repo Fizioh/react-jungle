@@ -1,9 +1,13 @@
 import CareScale from './careScale'
 import '../styles/plantItem.css'
 
+function handleClick(plantName) {
+    alert(`Vous voulez prendre une ${plantName} ? Très bon choix !`);
+}
+
 function PlantItem({id, cover, name, water, light}) {
    return (
-       <li key={id} className='lmj-plant-item'>
+       <li key={id} className='lmj-plant-item' onClick={() => handleClick(name)}>
             <img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
             {name}
             <div>
