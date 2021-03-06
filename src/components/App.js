@@ -1,8 +1,8 @@
 
-import Banner from './Banner'
+import Banner from './banner'
 import logo from '../assets/logo.png'
 // import Cart from './Cart'
-import ShoppingList from './ShoppingList'
+import ShoppingList from './shoppingList'
 
 function App() {
 	return (
