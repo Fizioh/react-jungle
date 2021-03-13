@@ -32,7 +32,7 @@ export const plantList = [
 		id: '4kk',
         isBestSale: true,
 		light: 2,
-		water: 2,
+		water: 3,
 		cover: monstera
 	},
 	{
