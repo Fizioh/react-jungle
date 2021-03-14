@@ -19,13 +19,14 @@ function CareScale({ scaleValue, careType }) {
 		var arrosage ='';
 
 		if (scaleValue === 3) {
-			arrosage = 'un max'
+			arrosage = 'un max'; 		
 		} else if (scaleValue === 2) {
-			arrosage = 'modérement'
+			arrosage = 'modérement'; 		
+
 		} else {
-			arrosage = 'un poco'
+			arrosage = 'un poco'; 		
 		}
-		
+
 
 	return (
 		<div onClick={() => handleClick(arrosage)}>
