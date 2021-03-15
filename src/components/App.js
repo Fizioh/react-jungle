@@ -4,6 +4,8 @@ import logo from '../assets/logo.png'
 import Cart from './cart'
 import ShoppingList from './shoppingList'
 import Footer from './footer'
+import { useState } from 'react'
+
 
 function App() {
 	const [cart, updateCart] = useState([])
