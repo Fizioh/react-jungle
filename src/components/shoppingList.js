@@ -11,6 +11,21 @@ function ShoppingList({cart, updateCart}) {
 		[]
 	)
 
+	function addToCart(name, price) {
+		const currentPlantAdded = cart.find((plant) => plant.name === name)
+		if (currentPlantAdded) {
+			const cartFilteredCurrentPlant = cart.filter(
+				(plant) => plant.name !== name
+			)
+			updateCart([
+				...cartFilteredCurrentPlant,
+				{name, price, amount: currentPlantAdded.amount + 1}
+			])
+		} else {
+			updateCart([...cart, { name, price, amount: 1 }])
+		}
+	}
+
 	return (
 		<div>
 			<ul>
@@ -27,7 +42,7 @@ function ShoppingList({cart, updateCart}) {
 					water={water}
 					light={light}
 					/>
-					<button onClick={() => updateCart(cart  + 1)}>Ajouter</button>
+					<button onClick={() => addToCart(name, price)}>Ajouter</button>
 					</div>
 				))}
 			</ul>
