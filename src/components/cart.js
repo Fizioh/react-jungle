@@ -25,7 +25,8 @@ function Cart({cart, updateCart}) {
 						{name} {price}$ *{amount}
 					  </div>
 				  ))}
-                  <h3>Total : {monsteraPrice * cart}$</h3>
+                  <h3>Total : {total}$</h3>
+				  <button onClick={() => updateCart([])}>Vider la panier</button>
                   
         </div>
       ) : (
