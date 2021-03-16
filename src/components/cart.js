@@ -2,8 +2,11 @@ import '../styles/cart.css';
 import { useState } from 'react'
 
 function Cart({cart, updateCart}) {
-    const monsteraPrice = 8
     const [isOpen, setIsOpen] = useState(true)
+	const total = cart.reduce(
+			(acc, plantType) => acc + plantType.amount * plantType.price,
+			0
+	)
 
     return isOpen ? (
 
@@ -17,6 +20,11 @@ function Cart({cart, updateCart}) {
 			        </button>
 
                   <h2>Panier</h2>
+				  {cart.map(({ name, price, amount }, index) => (
+					  <div key={`${name}-${index}`}>
+						{name} {price}$ *{amount}
+					  </div>
+				  ))}
                   <h3>Total : {monsteraPrice * cart}$</h3>
                   
         </div>
