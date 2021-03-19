@@ -5,6 +5,7 @@ import Cart from './cart'
 import ShoppingList from './shoppingList'
 import Footer from './footer'
 import { useState } from 'react'
+import '../styles/layout.css'
 
 
 function App() {
