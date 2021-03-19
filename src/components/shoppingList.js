@@ -20,12 +20,11 @@ function ShoppingList({cart, updateCart, currentValue}) {
 		}
 	}
 
-	return (
+	return currentValue === undefined ?(
 		<div>
 			
 			<ul className='lmj-plant-list'>
 				{plantList.map(({id, cover, name, water, light, price, category }) => (
-					category === currentValue ? ( 
 					<div key={id}>
 					<PlantItem 
 					cover={cover}
@@ -36,10 +35,31 @@ function ShoppingList({cart, updateCart, currentValue}) {
 					category={category}
 					/>
 					<button onClick={() => addToCart(name, price)}>Ajouter</button>
-					</div> ) : null
+					</div>  
 				))}
 			</ul>
 		</div>
+	) :(
+		<div>
+			
+			<ul className='lmj-plant-list'>
+				{plantList.map(({id, cover, name, water, light, price, category }) => (
+					 category === currentValue ?
+					<div key={id}>
+					<PlantItem 
+					cover={cover}
+					name={name}
+					price={price}
+					water={water}
+					light={light}
+					category={category}
+					/>
+					<button onClick={() => addToCart(name, price)}>Ajouter</button>
+					</div>  : null
+				))}
+			</ul>
+		</div>
+
 	)
 }
 

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { plantList } from '../datas/plantList'
 
 
@@ -8,10 +7,9 @@ function Categories({currentValue, setCurrentValue}){
 			acc.includes(plant.category) ? acc : acc.concat(plant.category),
 		[]
 	)
-
     return(
         <div>
-            <select id="dropdown" value={currentValue} onChange={e => setCurrentValue(e.currentTarget.value)}>
+            <select id="dropdown" value={currentValue}   onChange={e => setCurrentValue(e.currentTarget.value)}>
             {categories.map((cat) => (
 					<option value={cat} key={cat}>{cat}</option>
 				))}
