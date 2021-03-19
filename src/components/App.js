@@ -5,6 +5,7 @@ import Cart from './cart'
 import ShoppingList from './shoppingList'
 import Footer from './footer'
 import { useState } from 'react'
+import Categories from './categories'
 import '../styles/layout.css'
 
 
@@ -19,6 +20,7 @@ function App() {
 			</Banner>
 			<div className='lmj-layout-inner'>
 				<Cart cart={cart} updateCart={updateCart} />
+				<Categories />
 				<ShoppingList cart={cart} updateCart={updateCart} />
 			</div>
 			<Footer />

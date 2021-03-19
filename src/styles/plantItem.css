@@ -11,3 +11,9 @@
     flex-direction: column;
     text-transform: capitalize;
 }
+.lmj-plant-item-price {
+    float: left;
+    color: green;
+    font-size: 15px;
+    font-weight: bolder;
+}
