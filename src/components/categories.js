@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { plantList } from '../datas/plantList'
+import PlantItem from './plantItem'
+
 
 
 function Categories(){
@@ -17,6 +19,23 @@ function Categories(){
 					<option value={cat} key={cat}>{cat}</option>
 				))}
             </select>
+
+            <ul className='lmj-plant-list'>
+				{plantList.map(({id, cover, name, water, light, price, category }) => (
+                    category === currentValue ? (
+					<div key={id}>
+					<PlantItem 
+					cover={cover}
+					name={name}
+					price={price}
+					water={water}
+					light={light}
+                    category={category}
+					/>
+					</div> ) : null
+				))}
+			</ul>
+
             
         </div>
     )
