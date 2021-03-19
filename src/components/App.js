@@ -11,6 +11,8 @@ import '../styles/layout.css'
 
 function App() {
 	const [cart, updateCart] = useState([])
+	const [currentValue, setCurrentValue] = useState()
+
 
 	return (
 		<div>
@@ -20,8 +22,8 @@ function App() {
 			</Banner>
 			<div className='lmj-layout-inner'>
 				<Cart cart={cart} updateCart={updateCart} />
-				<Categories />
-				<ShoppingList cart={cart} updateCart={updateCart} />
+				<Categories currentValue={currentValue} setCurrentValue={setCurrentValue} />
+				<ShoppingList cart={cart} updateCart={updateCart} currentValue={currentValue} setCurrentValue={setCurrentValue}/>
 			</div>
 			<Footer />
 		</div>

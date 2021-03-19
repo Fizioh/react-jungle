@@ -3,7 +3,7 @@ import '../styles/shoppingList.css'
 import PlantItem from './plantItem'
 
 
-function ShoppingList({cart, updateCart}) {
+function ShoppingList({cart, updateCart, currentValue}) {
 
 	function addToCart(name, price) {
 		const currentPlantAdded = cart.find((plant) => plant.name === name)
@@ -24,7 +24,8 @@ function ShoppingList({cart, updateCart}) {
 		<div>
 			
 			<ul className='lmj-plant-list'>
-				{plantList.map(({id, cover, name, water, light, price }) => (
+				{plantList.map(({id, cover, name, water, light, price, category }) => (
+					category === currentValue ? ( 
 					<div key={id}>
 					<PlantItem 
 					cover={cover}
@@ -32,9 +33,10 @@ function ShoppingList({cart, updateCart}) {
 					price={price}
 					water={water}
 					light={light}
+					category={category}
 					/>
 					<button onClick={() => addToCart(name, price)}>Ajouter</button>
-					</div>
+					</div> ) : null
 				))}
 			</ul>
 		</div>
