@@ -9,7 +9,8 @@ function Categories({currentValue, setCurrentValue}){
 	)
     return(
         <div>
-            <select id="dropdown" value={currentValue}   onChange={e => setCurrentValue(e.currentTarget.value)}>
+            <select id="dropdown" value={currentValue}  onChange={e => setCurrentValue(e.currentTarget.value)}>
+            <option value='reinit'>reinitialiser</option>
             {categories.map((cat) => (
 					<option value={cat} key={cat}>{cat}</option>
 				))}

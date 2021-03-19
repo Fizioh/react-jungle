@@ -20,7 +20,7 @@ function ShoppingList({cart, updateCart, currentValue}) {
 		}
 	}
 
-	return currentValue === undefined ?(
+	return currentValue === undefined || currentValue ==='reinit' ?(
 		<div>
 			
 			<ul className='lmj-plant-list'>
