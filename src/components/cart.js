@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 function Cart({cart, updateCart}) {
     const [isOpen, setIsOpen] = useState(true)
 	const items = Object.keys(cart)
-	const total = teims.reduce(
+	const total = items.reduce(
 		(acc, item) => acc + cart[item].amount *  cart[item].price,
 		0
 	)
@@ -23,6 +23,7 @@ function Cart({cart, updateCart}) {
 				      Fermer
 
 			        </button>
+
 					{cart.length > 0 ? (
 
 					
