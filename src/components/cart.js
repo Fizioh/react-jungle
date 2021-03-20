@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react'
 
 function Cart({cart, updateCart}) {
     const [isOpen, setIsOpen] = useState(true)
-	const total = cart.reduce(
-			(acc, plantType) => acc + plantType.amount * plantType.price,
-			0
+	const items = Object.keys(cart)
+	const total = teims.reduce(
+		(acc, item) => acc + cart[item].amount *  cart[item].price,
+		0
 	)
 		useEffect(() => {
 			document.title = `LMJ: ${total}$ d'achats`
@@ -22,7 +23,10 @@ function Cart({cart, updateCart}) {
 				      Fermer
 
 			        </button>
+					{cart.length > 0 ? (
 
+					
+				<div>
                   <h2>Panier</h2>
 				  {cart.map(({ name, price, amount }, index) => (
 					  <div key={`${name}-${index}`}>
@@ -31,6 +35,11 @@ function Cart({cart, updateCart}) {
 				  ))}
                   <h3>Total : {total}$</h3>
 				  <button onClick={() => updateCart([])}>Vider le panier</button>
+				</div> 
+				
+					) : (
+						<div>Votre panier est vide</div>
+					)}
                   
         </div>
       ) : (
