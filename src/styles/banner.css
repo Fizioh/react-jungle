@@ -1,10 +1,10 @@
 .lmj-banner {
 	color: rgba(15, 15, 15, 0.623);
 	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
-	background-color: rgba(128, 128, 128, 0.438);
+	background-color: rgba(139, 131, 131, 0.308);
 	text-align: left;
-	padding: 32px;
-	border-bottom: solid 3px black;
+	padding: 1.2px;
+	border-bottom: solid 3px rgba(36, 35, 35, 0.678);
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
