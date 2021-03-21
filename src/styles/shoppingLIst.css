@@ -10,3 +10,20 @@
 	flex-wrap: wrap;
 	justify-content: center;
 }
+.lmj-plant-button {
+	margin: auto;
+	display: block;
+	color: white;
+	font-size: 17px;
+	background-color: rgba(47, 175, 47, 0.788);
+	border: 2px solid transparent;
+	padding: 8px;
+	border-radius: 18px;
+
+}
+.lmj-plant-button:hover {
+		background-color: rgba(218, 230, 218, 0);
+		color: rgb(47, 175, 47);
+		border: 2px solid rgb(47, 175, 47);
+
+}
