@@ -12,7 +12,6 @@ function Cart({cart, updateCart}) {
 		document.title = `LMJ: ${total}€ d'achats`
 	}, [total])
 
-
     return isOpen ? (
 
       <div className='lmj-cart'>
@@ -31,7 +30,7 @@ function Cart({cart, updateCart}) {
                   <h2>Panier</h2>
 				  {cart.map(({ name, price, amount }, index) => (
 					  <div key={`${name}-${index}`}>
-						{name} {price}$ *{amount}
+						{name} {price}$ *{amount} <button onclick={() => updateCart([])}>annuler</button>
 					  </div>
 				  ))}
                   <h3>Total : {total}$</h3>
